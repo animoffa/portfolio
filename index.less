@@ -1,0 +1,112 @@
+@import "./vars";
+
+html {
+  width: 100%;
+  padding: 0;
+  background-color: #fff5ef;
+  background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+body {
+  margin: 0;
+  width: 100%;
+
+}
+
+
+.app {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: @header-color; /* Для старых браузров */
+  background: linear-gradient(to bottom, @header-color, transparent);
+  height: 55px;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+
+    &__elem {
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    & * {
+      color: #ffffff;
+      margin: 0 20px;
+      text-transform: uppercase;
+      font-family: @font;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    &__line {
+      margin: 0;
+      height: 2px;
+      width: 0;
+      background-color: transparent;
+    }
+
+    &__text {
+      margin: 0;
+    }
+  }
+}
+
+.slider {
+  z-index: -1;
+  width: 100%;
+}
+
+.title {
+  z-index: 2;
+  top: 180px;
+  left: 20%;
+  position: absolute;
+  font-family: @font;
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+
+  &__subtitle {
+  font-size:30px;
+    font-weight:normal;
+  }
+
+  &__line {
+    height: 2px;
+    background-color: white;
+    width: 60px;
+  }
+}
+#typing{
+  font-size:30px;
+  font-weight:normal;
+}
+.typed-cursor{
+  opacity: 1;
+  font-weight: 200;
+  animation: blink 0.7s infinite;
+}
+.about{
+  height:1000px;
+  background-color:white;
+}
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
